@@ -1,0 +1,53 @@
+#myNav ul li {
+  margin-right: 20px;
+
+  &:last-child a {
+    background-color: $light-green;
+    color: $primary-color;
+    border-color: transparent;
+    padding: 12px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      transform: scale(1);
+    }
+    p {
+      transition: 0.25s ease-in-out;
+    }
+    &:hover p {
+      position: relative;
+      transform: translateY(-150%);
+    }
+    .svg {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) scale(0.8);
+      transition: 0.25s ease-in-out;
+    }
+    &:hover .svg {
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+  }
+
+  a {
+    border-radius: 25px;
+    color: white;
+    padding: 8px 15px;
+    display: block;
+    border: 1px solid white;
+    // box-shadow: 0 0 15px rgba($color: #16125f, $alpha: 0.1);
+    // text-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.2);
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.13);
+    transition: 0.152s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

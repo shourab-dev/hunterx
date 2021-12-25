@@ -1,0 +1,101 @@
+#featured {
+  min-height: 80vh;
+  padding: 50px 0;
+  .featured_top {
+    ul {
+      li {
+        display: inline-block;
+        margin-right: 20px;
+        button.prev_arrow,
+        button.next_arrow {
+          padding: 0;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          line-height: 35px;
+          text-align: center;
+          background-color: #e0e3eb;
+          border: none;
+          color: #888b97;
+        }
+        button {
+          border: none;
+          outline: none;
+          padding: 10px 25px;
+          border-radius: 25px;
+          color: #888b97;
+          border: 1px solid #888b97;
+          background-color: transparent;
+          transition: 0.15s ease-in-out;
+          &:hover {
+            background-color: $light-green;
+            color: $primary-color;
+            border-color: transparent;
+          }
+          p {
+            display: inline-block;
+          }
+        }
+        button.active {
+          background-color: $light-green;
+          color: $primary-color;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  .featured_slider {
+    margin-left: auto !important;
+    margin-top: 50px;
+    width: 90%;
+    max-width: 1420px;
+
+    .featured_slide {
+      padding: 0 15px;
+      &:hover {
+        cursor: pointer;
+      }
+      &:hover .img img {
+        transform: scale(1.2);
+      }
+      .img {
+        overflow: hidden;
+        img {
+          width: 100%;
+          display: block;
+          transition: 0.3s ease-in-out;
+        }
+      }
+      .detail {
+        h3 {
+          font-size: 24px;
+          font-weight: 500;
+          color: $heading-color;
+        }
+        p {
+          color: #3c4563;
+          font-size: 20px;
+          margin: 10px 0;
+          font-weight: 500;
+        }
+      }
+      .owner {
+        img {
+          width: 100%;
+          display: block;
+        }
+        h4 {
+          font-size: 18px;
+          font-weight: 500;
+          color: $heading-color;
+        }
+        p {
+          font-size: 14px;
+          font-weight: 500;
+          color: #888b97;
+        }
+      }
+    }
+  }
+}

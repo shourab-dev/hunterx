@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+nav,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+// basic css
+
+//common variable
+$primary-color: #10b981;
+$heading-color: #1b1c57;
+$sub-heading: #f59e0b;
+$light-green: #d1fae5;
+
+// sub heading
+@mixin subHeading() {
+  color: $sub-heading;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    width: 40px;
+    height: 2px;
+    background-color: $sub-heading;
+  }
+}
+
+@mixin heading($align: left) {
+  color: $heading-color;
+  font-weight: 600;
+  font-size: 32px;
+  text-align: $align;
+}
+
+p.sub-heading {
+  @include subHeading();
+}
+h2 {
+  @include heading();
+}

@@ -1,0 +1,21 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+
+  z-index: 99999999999;
+  pointer-events: none;
+
+  .preloader_part {
+    height: 100%;
+    width: 20%;
+    background-color: $light-green;
+
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    img {
+      width: 150px;
+    }
+  }
+}
