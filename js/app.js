@@ -144,7 +144,6 @@ $(function () {
       trigger: "#featured",
       start: "100px center",
       end: "bottom bottom",
-      pin: true,
     },
   });
 });
